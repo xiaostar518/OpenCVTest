@@ -3,42 +3,78 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include "ImageChange.h"
 #include <iostream>
+#include "PerspectiveTest.h"
+#include "Polar.h"
+#include "FlipTest.h"
+#include "GrayHist.h"
+#include "ImageControl.h"
+#include "ThreshControl.h"
+#include "ErodeControl.h"
+#include "EdgeControl.h"
+
 
 using namespace std;
 using namespace cv;
-
 
 int main(int argc, char* argv[])
 {
 
 	//test();
 
-	Mat I = imread("cat1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
-	if (!I.data)
-		return -1;
+	//perTest();
 
-	//Mat s = (Mat_<float>(2, 3) << 0.5, 0, 0, 0, 0.5, 0);
-	//Mat dst1;
-	//warpAffine(I, dst1, s, Size(I.cols / 2, I.rows / 2));
+	//polar_test();
 
-	//Mat dst2;
-	//resize(I, dst2, Size(I.cols / 2, I.rows / 2), 0.5, 0.5);
+	//flipTest();
 
-	//imshow("I", I);
-	//imshow("wrapAffine", dst1);
-	//imshow("resize", dst2);
+	//calcGrayHist();
 
+	//lineTest();
 
-	Mat rImg;
-	rotate(I, rImg, ROTATE_90_CLOCKWISE);
-	//rotate(I, rImg, ROTATE_180);
-	//rotate(I, rImg, ROTATE_90_COUNTERCLOCKWISE);
+	//lineTest1();
 
+	//lineTest2();
 
-	imshow("Ô­Í¼", I);
-	imshow("Ðý×ª", rImg);
+	//lineTest3();
 
-	waitKey(0);
+	//lineTest4();
+
+	//GrayHistTest5();
+
+	//GrayHistTest6();
+
+	//imageControlTest();
+
+	//gaussTest();
+
+	//blurTest();
+
+	//medianSmoothTest();
+
+	//bfltGaryTest();
+
+	//joinBLFTest();
+
+	//guidedFilterTest();
+
+	//threshTest();
+
+	//threshTwoPeaksTest();
+
+	//otsuTest();
+
+	//adaptiveThreshTest();
+
+	//and_or_Test();
+
+	//erodeTest();
+
+	//dilateTest();
+
+	//hatTest();
+
+	robertsTest();
 
 	return  cin.get();
 }
+

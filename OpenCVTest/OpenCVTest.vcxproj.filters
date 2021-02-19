@@ -24,9 +24,60 @@
     <ClCompile Include="ImageChange.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="PerspectiveTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Polar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GrayHist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreshControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ErodeControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EdgeControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImageChange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PerspectiveTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Polar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FlipTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GrayHist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreshControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ErodeControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EdgeControl.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -34,5 +85,13 @@
     <Image Include="cat1.jpg">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="image1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpenCVTest.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

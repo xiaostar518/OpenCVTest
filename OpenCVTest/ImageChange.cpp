@@ -9,7 +9,6 @@ using namespace cv;
 
 int test()
 {
-
 	//Mat img = imread(argv[1], CV_LOAD_IMAGE_ANYCOLOR);
 	//if (!img.data)
 	//	return -1;
@@ -109,6 +108,67 @@ int test()
 
 	Mat B = getRotationMatrix2D(Point2d(40, 50), 30, 0.5);
 	cout << "B = " << B << endl;
+
+	return 0;
+}
+
+int test1()
+{
+	Mat I = imread("cat1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	if (!I.data)
+		return -1;
+
+	Mat s = (Mat_<float>(2, 3) << 0.5, 0, 0, 0, 0.5, 0);
+	Mat dst1;
+	warpAffine(I, dst1, s, Size(I.cols / 2, I.rows / 2));
+
+	Mat dst2;
+	resize(I, dst2, Size(I.cols / 2, I.rows / 2), 0.5, 0.5);
+
+	imshow("I", I);
+	imshow("wrapAffine", dst1);
+	imshow("resize", dst2);
+
+
+	Mat rImg;
+	rotate(I, rImg, ROTATE_90_CLOCKWISE);
+	//rotate(I, rImg, ROTATE_180);
+	//rotate(I, rImg, ROTATE_90_COUNTERCLOCKWISE);
+
+	imshow("Ô­Í¼", I);
+	imshow("Ðý×ª", rImg);
+
+	Point2f src[] = { Point2f(0,0),Point2f(200.0,0), Point2f(0,200.0), Point2f(200.0,200.0) };
+	Point2f dst[] = { Point2f(100,20),Point2f(200.0,20), Point2f(50,70), Point2f(250,70) };
+
+	Mat src3 = (Mat_<float>(4, 2) << 0, 0, 200, 0, 0, 200, 200, 200);
+	Mat dst3 = (Mat_<float>(4, 2) << 100, 20, 200, 20, 50, 70, 250, 70);
+
+	Mat P = getPerspectiveTransform(src3, dst3);
+	cout << "P = " << P << endl;
+
+	return 0;
+}
+
+int test2()
+{
+	Mat x = (Mat_<float>(3, 3) << 0, 1, 2, 0, 1, 2, 0, 1, 2) - 1;
+	Mat y = (Mat_<float>(3, 3) << 0, 0, 0, 1, 1, 1, 2, 2, 2) - 1;
+	Mat r, theta;
+	cartToPolar(x, y, r, theta, true);
+
+	cout << "r = " << r << endl;
+	cout << "theta = " << theta << theta;
+
+
+	Mat angle = (Mat_<float>(2, 2) << 30, 31, 30, 31);
+	Mat r1 = (Mat_<float>(2, 2) << 10, 10, 11, 11);
+
+	Mat x1, y1;
+	polarToCart(r1, angle, x1, y1, true);
+	cout << "x1= " << x1 << endl;
+	cout << "y1 = " << y1 << endl;
+	waitKey(0);
 
 	return 0;
 }

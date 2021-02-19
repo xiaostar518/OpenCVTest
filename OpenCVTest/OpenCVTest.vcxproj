@@ -101,7 +101,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -151,18 +151,39 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EdgeControl.cpp" />
+    <ClCompile Include="ErodeControl.cpp" />
+    <ClCompile Include="FlipTest.cpp" />
+    <ClCompile Include="GrayHist.cpp" />
     <ClCompile Include="ImageChange.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ImageControl.cpp" />
     <ClCompile Include="OpenCVTest.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PerspectiveTest.cpp" />
+    <ClCompile Include="Polar.cpp" />
+    <ClCompile Include="ThreshControl.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EdgeControl.h" />
+    <ClInclude Include="ErodeControl.h" />
+    <ClInclude Include="FlipTest.h" />
+    <ClInclude Include="GrayHist.h" />
     <ClInclude Include="ImageChange.h" />
+    <ClInclude Include="ImageControl.h" />
+    <ClInclude Include="PerspectiveTest.h" />
+    <ClInclude Include="Polar.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ThreshControl.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="cat1.jpg" />
+    <Image Include="image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpenCVTest.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
